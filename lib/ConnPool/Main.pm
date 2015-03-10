@@ -1,10 +1,6 @@
 package ConnPool::Main;
 use Mojo::Base 'Mojolicious::Controller';
 
-my $VERSION = "0.9";
-
-use JSON;
-
 sub test {
     my $self = shift;
 

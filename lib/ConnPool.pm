@@ -1,11 +1,13 @@
 package ConnPool;
 use Mojo::Base 'Mojolicious';
 
-my $conn_pool = [];
-
 # This is called once, the first time $self->app->pool is called
 has pool => sub {
     my $self = shift;
+
+    say "[DEBUG] POOLIN' UP DAWG!";
+
+    my $conn_pool = [];
 
     # Plugins are loaded here so grab some values from the config file
     foreach my $i (1..$self->app->config->{pool_size}) {
